@@ -1,0 +1,146 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #210033;
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+    padding: 30px;
+  }
+  
+  /* Header com logo, input e botões */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+  
+  .menu-topo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* ou center */
+    gap: 10px; /* espaço entre os botões */
+    position: absolute; /* ou fixe conforme seu layout */
+    top: 10px;
+    right: 10px; /* se quiser no canto */
+  }
+  
+  .logo {
+    width: 50px;
+  }
+  
+  #search {
+    flex: 1;
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(to right, #f5b0ff, #f15fe6);
+    color: #3a003d;
+    font-weight: 500;
+  }
+  
+  header .actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  header .actions button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(to right, #ff80ff, #9900ff);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s;
+  }
+  
+  header .actions button:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Container principal */
+  .container {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  /* Área de imagem / preview */
+  .preview {
+    background: linear-gradient(to bottom, #4b007d, #3b0063);
+    width: 300px;
+    height: 400px;
+    border-radius: 40px;
+  }
+  
+  /* Formulário */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
+    flex: 1;
+  }
+  
+  .input-text {
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(to right, #f8ccff, #f15fe6);
+    color: #2c0033;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  
+  .input-text::placeholder {
+    color: #660066;
+  }
+  
+  /* Botões do formulário */
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  
+  .button {
+    flex: 1;
+    padding: 12px 0;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(to right, #cc00ff, #6600ff);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(to right, #b300e6, #4d00cc);
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .button-container {
+      flex-direction: column;
+    }
+  }
+  
